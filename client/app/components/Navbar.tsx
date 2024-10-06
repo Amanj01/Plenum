@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
         onMouseLeave={() => setIsHovered(false)}
       >
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
+      <div className="max-w-7xl pl-8 pr-4 lg:mx-1">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             ))}
           </div>
           <div className="hidden md:flex items-center">
-            <Link href="/contact" className="ml-8 text-sm font-medium">
+            <Link href="/contact" className=" text-sm font-medium">
               CONTACT
             </Link>
           </div>
