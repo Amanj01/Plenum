@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import image1 from "@/public/s111.png"
-import image2 from "@/public/s2.png"
-import image3 from "@/public/s3.png"
-import image4 from "@/public/s4.png"
-import image5 from "@/public/s5.png"
-import image6 from "@/public/s6.png"
-import image7 from "@/public/s7.png"
+import image1 from "@/public/ab.png"
+import image2 from "@/public/Infinity+logoL.png"
+import image3 from "@/public/alapanaL.png"
+import image4 from "@/public/armani+rocaL.png"
+import image5 from "@/public/cobertL.png"
+import image6 from "@/public/imageL.png"
+import image7 from "@/public/prissmacerL.png"
 
 const sponsors = [
   { id: 1, image: image1 },
@@ -39,7 +39,7 @@ const Sponsors = () => {
           animation: scroll 7s linear infinite;
         }
       `}</style>
-      <div className="flex animate-scroll items-center py-30">
+      <div className="flex animate-scroll items-center py-40">
         {[...sponsors, ...sponsors].map((sponsor, index) => (
           <div key={`${sponsor.id}-${index}`} className="flex-shrink-0 mx-8">
             <Image 

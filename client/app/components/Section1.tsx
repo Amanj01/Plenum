@@ -59,7 +59,7 @@ const Section1 = () => {
       >
         <div className='description flex flex-col gap-6 md:gap-8'>
           <p>Plenum produces ceramic slabs which challenge the traditional uses of this material, creating large sized minimum thickness surfaces, which are used in exterior architecture, interior design and furnishings.</p>
-          <button style={{border:"1px solid white"}} className='button hover:bg-white hover:text-black rounded-md w-max py-1 px-3'>ABOUT US</button>
+          <button style={{border:"1px solid white"}} className='button w-max custom-button py-1 px-3'>ABOUT US</button>
         </div>
       </motion.div>
 
@@ -72,7 +72,6 @@ const Section1 = () => {
         <div className='text w-full md:w-[50%] flex flex-col gap-6 md:gap-10'>
           <h1 className='text-3xl sm:text-4xl md:text-5xl font-light'>AUTOMOBILI <br /> LAMBORGHINI <br /> SURFACES</h1>
           <p>Automobili Lamborghini Surfaces is the result of the collaboration between Automobili Lamborghini and Laminam, two iconic Italian brands renowned for their quality and design excellence. The two companies have joined forces, combining their vision and style to offer the interior design industry with luxury surfaces with unique character.</p>
-          <button style={{border:"1px solid white"}} className='button hover:bg-white hover:text-black rounded-md w-max py-1 px-3'>DISCOVER MORE</button>
         </div>
 
         <div className='image w-full md:w-[35%] object-cover h-max'>

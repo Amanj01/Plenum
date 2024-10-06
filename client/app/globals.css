@@ -26,4 +26,18 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;  /* Chrome, Safari, and Opera */
 }
+.custom-button {
+  color: white;
+  background-color: transparent;
+  border: 2px solid #D1D5DB; /* gray-300 */
+  padding: 6px 24px; /* py-2 px-6 */
+  border-radius: 6px; /* rounded-md */
+  font-size: 14px; /* text-sm */
+  transition: all 0.5s ease; /* transition-all duration-500 */
+}
 
+.custom-button:hover {
+  color: black; /* hover:text-black */
+  background-color: white; /* hover:bg-white */
+  background-color: rgba(255, 255, 255, 0.9); /* hover:bg-opacity-90 */
+}

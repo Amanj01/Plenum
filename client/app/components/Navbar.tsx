@@ -2,9 +2,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import logoW from '@/public/logo 2.png';
-import logoB from '@/public/logo 3.png';
 import Image from 'next/image';
+import logosvg from '@/public/svglogo.svg';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +36,7 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
               <Image 
-                src={isHovered ? logoB : logoW} 
+                src={isHovered ?  logosvg : logosvg} 
                 alt={'logo'} 
                 width={100}
                 height={50}

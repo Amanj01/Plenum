@@ -42,9 +42,13 @@ const Footer = () => {
                 to date with our latest news and to
                 receive product updates.
               </p>
-              <button style={{border:"1px solid white"}} className='button hover:bg-white hover:text-black rounded-md w-max py-1 px-3'>
-                SUBSCRIBE NOW
-              </button>
+              <button
+  style={{ border: "2px solid #D1D5DB" }} // Updated border style
+  className="text-white bg-transparent border-2 border-gray-300 py-2 px-6 rounded-md text-sm transition-all duration-500 ease-in-out hover:text-black hover:bg-white hover:bg-opacity-90 w-max"
+>
+  SUBSCRIBE NOW
+</button>
+
             </div>
             
             <div>

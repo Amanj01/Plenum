@@ -25,7 +25,7 @@ const Header = () => {
               your style.
             </h1>
 
-          <button className=" text-white hover:text-black hover:bg-white border-2 border-gray-300 py-2 px-6 rounded-md text-sm hover:bg-opacity-90 transition-all duration-500">
+            <button className="custom-button">
             EXPLORE PLENUM
           </button>
         </div>

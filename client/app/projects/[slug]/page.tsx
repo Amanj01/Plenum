@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 import image1 from "@/public/sp1.png"
+import image2 from "@/public/sp2.png"
+import image3 from "@/public/sp3.png"
 import Navbar from '@/app/components/Navbar'
 
 
@@ -63,8 +65,9 @@ const SingleProject = () => {
           </div>
 
           {/* images */}
-          <div>
-            
+          <div className='flex justify-between gap-4'>
+            <div className='content-center pl-6 md:pl-36 lg:pl-52'><Image src={image3} alt='imag3' /></div>
+            <div ><Image  src={image2} alt='image2'/></div>
           </div>
 
         </div>

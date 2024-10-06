@@ -4,6 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 import image7 from "@/public/mini+slava+site+1 1.png";
 import image8 from "@/public/american+embassy+2 1.png";
 import image9 from "@/public/1-2 1.png";
+import Link from 'next/link';
 
 // Define the Project interface
 interface Project {
@@ -41,25 +42,35 @@ const projects: Project[] = [
 ];
 
 const ProjectsScroller = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
-  // Automatically scroll to the right every few seconds
+  
   useEffect(() => {
     const interval = setInterval(() => {
       handleScrollRight();
-    }, 2000); // Adjust the interval as needed
+    }, 2000); 
 
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, [scrollPosition]);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleScrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: 300, // Adjust this value for how much you want to scroll
-        behavior: 'smooth',
-      });
-      setScrollPosition(scrollContainerRef.current.scrollLeft);
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      
+      if (scrollLeft + clientWidth >= scrollWidth - 1) {
+       
+        setTimeout(() => {
+          scrollContainerRef.current?.scrollTo({
+            left: 0,
+            behavior: 'smooth',
+          });
+        }, 500); 
+      } else {
+        scrollContainerRef.current.scrollBy({
+          left: 300, 
+          behavior: 'smooth',
+        });
+      }
     }
   };
 
@@ -69,7 +80,6 @@ const ProjectsScroller = () => {
         left: -300, // Adjust this value for how much you want to scroll
         behavior: 'smooth',
       });
-      setScrollPosition(scrollContainerRef.current.scrollLeft);
     }
   };
 
@@ -87,17 +97,15 @@ const ProjectsScroller = () => {
 
       {/* Scrollable Project Section */}
       <div className="relative">
-        {/* Left Arrow */}
-        <span onClick={handleScrollLeft} className='absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer'>
-          <IoIosArrowDropleftCircle size={40} />
-        </span>
+ 
 
         <div
           ref={scrollContainerRef}
           className="grid grid-flow-col gap-8 overflow-x-auto scrollbar-hide cursor-pointer"
         >
           {projects.map((project, index) => (
-            <div
+           <Link href={"projects"}>
+               <div
               key={index}
               className="group rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[300px] lg:min-w-[400px]"
             >
@@ -116,13 +124,11 @@ const ProjectsScroller = () => {
                 <p className="text-white">{project.description}</p>
               </div>
             </div>
+           </Link>
           ))}
         </div>
 
-        {/* Right Arrow */}
-        <span onClick={handleScrollRight} className='absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer'>
-          <IoIosArrowDroprightCircle size={40} />
-        </span>
+ 
       </div>
     </div>
   );
